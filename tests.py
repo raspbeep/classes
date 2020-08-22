@@ -18,3 +18,5 @@ def test_P2(amount, currency, merchant, status_code):
 def test_P3(amount, currency, merchant, status_code):
     prov = P3()
     assert prov.pay(amount, currency, merchant) == status_code
+
+print("hello")
