@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 class P1:
@@ -8,14 +9,15 @@ class P1:
             'Content-Type': 'application/json',
         }
 
-        data = f'{{"amount":{amount},"currency":{currency}}}'
+        data = {"amount": amount, "currency": currency}
 
-        response = requests.post('http://localhost:5000/v1/charge', headers=headers, data=data)
-        print(response.text)
+        response = requests.post('https://pythonweekend-ke.herokuapp.com/v1/charge', headers=headers, data=json.dumps(data))
+        print(response.status_code)
 
 
 prov = P1()
-prov.pay(5, "EUR")
+
+prov.pay("6", "EUR")
 
 """
 class P2:
