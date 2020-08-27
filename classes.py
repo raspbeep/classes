@@ -35,7 +35,7 @@ class P2:
             return response.status_code
 
         except NameError:
-            return 69
+            return 500
 
 
 
@@ -63,4 +63,4 @@ class P3:
 
         else :
 
-            return 69
+            return 500
